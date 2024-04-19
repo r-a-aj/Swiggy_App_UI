@@ -108,11 +108,11 @@ function DeliverySection ()  {
     ]}
 
     return (
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto px-2">
                 <div className="flex my-3 items-center justify-between">
                     <div className="text-[20px] font-bold">Top restaurant chains in Bhubaneswar</div>
                 </div>
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {CardContainer.cardDetails.map(
                         (d, i) => <Card {...d} key={i}/>
                     )}

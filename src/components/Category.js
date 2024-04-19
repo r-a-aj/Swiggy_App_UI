@@ -89,17 +89,17 @@ function Category() {
     ]}
 
     const nextSlide = () => {
-        if (Category.foodCategory.length - 8 == slide) return false;
+        if (Category.foodCategory.length - 8 === slide) return false;
         setSlide(slide + 3)
     }
 
     const prevSlide = () => {
-        if (slide == 0) return false;
+        if (slide === 0) return false;
         setSlide(slide - 3)
     }
                                                                                                   
     return (
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto px-2">
                 <div className="flex my-3 items-center justify-between">
                     <div className="text-[20px] font-bold">What's on your mind?</div>
                         <div className="flex">

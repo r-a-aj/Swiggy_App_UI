@@ -6,6 +6,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 
 function Header() {
     const [toggle, setToggle] = useState(false);
+    
 
     const showSideMenu = () => {
         setToggle(true);
@@ -14,6 +15,8 @@ function Header() {
     const hideSideMenu = () => {
         setToggle(false);
     }
+
+
     return (
         <>  
             <div className='black-overlay w-full h-full fixed duration-500' onClick={hideSideMenu} style={{
@@ -23,7 +26,7 @@ function Header() {
             }}>
                 <div onClick={(e) => {e.stopPropagation()}} className='w-[500px] bg-white h-full absolute duration-[300ms]' style={{left: toggle ? '0%' : '-100%'}}></div>
             </div>
-            <header className='p[15px] shadow-xl text-[#686b78]'>
+            <header className='p[15px] shadow-xl text-[#686b78] sticky top-0 bg-white z-[99999999999]'>
                 <div className='max-w-[1200px] mx-auto flex items-center'>
                     <div className='w-[60px] h-[60px] pt-4'>
                         <img src='images/Swiggy-logo.png' className='w-full' alt=''/>
@@ -31,7 +34,7 @@ function Header() {
                     <div>
                         <span className='font-bold border-b-[3px] border-[black]'>Bhubaneswar</span>  Odisha, India <RxCaretDown onClick={showSideMenu} fontSize={25} className='inline text-[#fc8019] cursor-pointer'/>
                     </div>
-                    <nav className='flex list-none gap-10 ml-auto font-semibold text-[18px]'>
+                    <nav className=' hidden md:flex list-none gap-10 ml-auto font-semibold text-[18px]'>
                             <li className='flex items-center gap-2 cursor-pointer hover:text-[#fc8019]'>
                                 <IoSearchOutline/>
                                 Search
